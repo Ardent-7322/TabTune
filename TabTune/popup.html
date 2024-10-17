@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TabTune</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      margin: 0;
+      box-sizing: border-box;
+    }
+    h2, h3 {
+      color: #2c3e50;
+      text-align: center;
+      margin-top: 0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    #statusIndicator {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+    button {
+      margin: 10px 0;
+      width: 100%;
+      padding: 12px;
+      cursor: pointer;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+    }
+    input {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #bdc3c7;
+      border-radius: 20px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    #addToWhitelistButton {
+      background-color: #3498db;
+      color: white;
+    }
+    #addToWhitelistButton:hover {
+      background-color: #2980b9;
+    }
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    #whitelistItems {
+      max-height: 150px;
+      overflow-y: auto;
+      margin-top: 10px;
+    }
+    .whitelistItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #ecf0f1;
+    }
+    .removeButton {
+      background-color: #e74c3c;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 15px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>TabTune</h2>
+    <div id="statusIndicator"></div>
+    <button id="toggleButton">Loading...</button>
+    <h3>Whitelist</h3>
+    <input type="text" id="urlInput" placeholder="Enter website URL">
+    <button id="addToWhitelistButton">Add to Whitelist</button>
+    <div id="whitelistItems"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
